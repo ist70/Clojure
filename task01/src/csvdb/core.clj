@@ -14,7 +14,9 @@
 ;;
 ;; Hint: vec, map, keyword, first
 (defn table-keys [tbl]
-  :ImplementMe!)
+  (vec (map keyword (first tbl)))
+;;  :ImplementMe!)
+)
 
 ;; (key-value-pairs [:id :surname :year :group_id] ["1" "Ivanov" "1996"])
 ;; => (:id "1" :surname "Ivanov" :year "1996")
@@ -113,6 +115,9 @@
       (where* where)
       (order-by* order-by)
       (limit* limit)))
+
+println(student-tbl)
+
 
 (select student)
 ;; => [{:id 1, :year 1998, :surname "Ivanov"} {:id 2, :year 1997, :surname "Petrov"} {:id 3, :year 1996, :surname "Sidorov"}]
